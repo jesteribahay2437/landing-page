@@ -1,0 +1,2920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        PrimaSmile Island Dental Clinic | Camiguin
+    </title>
+
+    <meta
+        name="description"
+        content="PrimaSmile Island Dental Clinic in Catarman, Camiguin. Quality dental care in a clean, comfortable and welcoming environment."
+    >
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        primary: '#0f8b8d',
+                        primaryDark: '#086b6d',
+                        skySoft: '#e9f8f8',
+                        cream: '#f8fbfa',
+                        ink: '#17333a',
+                        muted: '#64777c'
+
+                    },
+
+                    fontFamily: {
+
+                        sans: [
+                            'Inter',
+                            'ui-sans-serif',
+                            'system-ui',
+                            'sans-serif'
+                        ]
+
+                    },
+
+                    boxShadow: {
+
+                        soft:
+                            '0 20px 60px rgba(15, 139, 141, .10)',
+
+                        card:
+                            '0 12px 40px rgba(20, 50, 55, .08)'
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+        }
+
+
+        /* ========================================
+           BACKGROUND BLOBS
+        ======================================== */
+
+        .blob {
+
+            position: absolute;
+
+            border-radius: 9999px;
+
+            filter: blur(1px);
+
+            pointer-events: none;
+
+        }
+
+
+        /* ========================================
+           HERO IMAGE
+        ======================================== */
+
+        .hero-image {
+
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(248,251,250,.98) 0%,
+                    rgba(248,251,250,.92) 35%,
+                    rgba(248,251,250,.20) 72%,
+                    rgba(248,251,250,0) 100%
+                ),
+                url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1800&q=90');
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        /* ========================================
+           FLOATING CARD
+        ======================================== */
+
+        .floating-card {
+
+            animation:
+                floatCard 5s ease-in-out infinite;
+
+        }
+
+        @keyframes floatCard {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-8px);
+
+            }
+
+        }
+
+
+        /* ========================================
+           FADE ANIMATION
+        ======================================== */
+
+        .fade-up {
+
+            animation:
+                fadeUp .8s ease forwards;
+
+        }
+
+        .fade-delay {
+
+            animation:
+                fadeUp .8s .15s ease forwards;
+
+            opacity: 0;
+
+        }
+
+        .fade-delay-2 {
+
+            animation:
+                fadeUp .8s .3s ease forwards;
+
+            opacity: 0;
+
+        }
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        /* ========================================
+           SERVICE CARD
+        ======================================== */
+
+        .service-card {
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+
+        }
+
+        .service-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 25px 60px
+                rgba(20,60,65,.10);
+
+            border-color:
+                rgba(15,139,141,.25);
+
+        }
+
+
+        /* ========================================
+           IMAGE HOVER
+        ======================================== */
+
+        .image-hover {
+
+            overflow: hidden;
+
+        }
+
+        .image-hover img {
+
+            transition:
+                transform .7s ease;
+
+        }
+
+        .image-hover:hover img {
+
+            transform:
+                scale(1.05);
+
+        }
+
+
+        /* ========================================
+           NAV LINK
+        ======================================== */
+
+        .nav-link {
+
+            position: relative;
+
+        }
+
+        .nav-link::after {
+
+            content: '';
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -7px;
+
+            width: 0;
+
+            height: 2px;
+
+            border-radius: 999px;
+
+            background:
+                #0f8b8d;
+
+            transition:
+                width .25s ease;
+
+        }
+
+        .nav-link:hover::after {
+
+            width: 100%;
+
+        }
+
+
+        /* ========================================
+           TESTIMONIAL QUOTE
+        ======================================== */
+
+        .quote-mark {
+
+            font-family: Georgia, serif;
+
+            line-height: .5;
+
+        }
+
+
+        /* ========================================
+           MAP
+        ======================================== */
+
+        .map-grid {
+
+            background-image:
+
+                linear-gradient(
+                    rgba(15,139,141,.08) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(15,139,141,.08) 1px,
+                    transparent 1px
+                );
+
+            background-size:
+                40px 40px;
+
+        }
+
+
+        /* ========================================
+           MOBILE MENU
+        ======================================== */
+
+        #mobileMenu {
+
+            transition:
+                opacity .2s ease;
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body
+    class="bg-[#f8fbfa] text-[#17333a] antialiased"
+>
+
+
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+
+<header
+    class="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/60 bg-white/85 backdrop-blur-xl"
+>
+
+    <div
+        class="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8"
+    >
+
+
+        <!-- LOGO -->
+
+        <a
+            href="#home"
+            class="flex items-center gap-3"
+        >
+
+            <div
+                class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#e8f8f8] text-[#0f8b8d]"
+            >
+
+                <!-- Tooth Icon -->
+
+                <svg
+                    class="h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                >
+
+                    <path
+                        d="M7.5 4.5C9 3.2 10.3 3 12 4c1.7-1 3-.8 4.5.5 2.1 1.8 2.2 5.2 1.6 8.1-.5 2.3-1.1 4.6-2.3 6.1-.5.7-1.4.7-1.8-.1l-1.1-2.7c-.3-.8-1.4-.8-1.7 0l-1.1 2.7c-.4.8-1.3.8-1.8.1-1.2-1.5-1.8-3.8-2.3-6.1-.6-2.9-.5-6.3 1.5-8.1Z"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                </svg>
+
+            </div>
+
+
+            <div class="leading-tight">
+
+                <div
+                    class="font-bold tracking-tight text-[#17333a]"
+                >
+                    PrimaSmile
+                </div>
+
+                <div
+                    class="text-[9px] font-semibold uppercase tracking-[.2em] text-[#0f8b8d]"
+                >
+                    Island Dental Clinic
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- DESKTOP NAV -->
+
+        <nav
+            class="hidden items-center gap-8 lg:flex"
+        >
+
+            <a
+                href="#home"
+                class="nav-link text-sm font-medium text-slate-600 hover:text-[#0f8b8d]"
+            >
+                Home
+            </a>
+
+            <a
+                href="#about"
+                class="nav-link text-sm font-medium text-slate-600 hover:text-[#0f8b8d]"
+            >
+                About
+            </a>
+
+            <a
+                href="#services"
+                class="nav-link text-sm font-medium text-slate-600 hover:text-[#0f8b8d]"
+            >
+                Services
+            </a>
+
+            <a
+                href="#reviews"
+                class="nav-link text-sm font-medium text-slate-600 hover:text-[#0f8b8d]"
+            >
+                Reviews
+            </a>
+
+            <a
+                href="#location"
+                class="nav-link text-sm font-medium text-slate-600 hover:text-[#0f8b8d]"
+            >
+                Location
+            </a>
+
+        </nav>
+
+
+
+        <!-- DESKTOP CTA -->
+
+        <a
+            href="tel:09369997175"
+            class="hidden items-center gap-2 rounded-full bg-[#0f8b8d] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#0f8b8d]/20 transition hover:-translate-y-0.5 hover:bg-[#086b6d] sm:inline-flex"
+        >
+
+            <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3l2 5-2 2a16 16 0 006 6l2-2 5 2v3a2 2 0 01-2 2C10.3 21 3 13.7 3 5Z"
+                />
+
+            </svg>
+
+            Book an Appointment
+
+        </a>
+
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+            id="menuButton"
+            type="button"
+            class="rounded-xl border border-slate-200 p-2.5 text-slate-700 lg:hidden"
+            aria-label="Open menu"
+        >
+
+            <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M4 6h16M4 12h16M4 18h16"
+                />
+
+            </svg>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        id="mobileMenu"
+        class="hidden border-t border-slate-100 bg-white px-5 pb-6 lg:hidden"
+    >
+
+        <div class="flex flex-col gap-1 pt-4">
+
+            <a
+                href="#home"
+                class="rounded-xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-[#eaf8f8]"
+            >
+                Home
+            </a>
+
+            <a
+                href="#about"
+                class="rounded-xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-[#eaf8f8]"
+            >
+                About
+            </a>
+
+            <a
+                href="#services"
+                class="rounded-xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-[#eaf8f8]"
+            >
+                Services
+            </a>
+
+            <a
+                href="#reviews"
+                class="rounded-xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-[#eaf8f8]"
+            >
+                Reviews
+            </a>
+
+            <a
+                href="#location"
+                class="rounded-xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-[#eaf8f8]"
+            >
+                Location
+            </a>
+
+            <a
+                href="tel:09369997175"
+                class="mt-3 rounded-full bg-[#0f8b8d] px-5 py-3.5 text-center text-sm font-bold text-white"
+            >
+                Call 0936 999 7175
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+
+<main>
+
+<section
+    id="home"
+    class="hero-image relative min-h-[720px] overflow-hidden pt-[76px] sm:min-h-[780px]"
+>
+
+
+    <!-- DECORATIVE SHAPES -->
+
+    <div
+        class="blob right-[-120px] top-[80px] hidden h-[420px] w-[420px] bg-[#d9f4f3]/50 lg:block"
+    ></div>
+
+
+    <div
+        class="blob bottom-[-100px] right-[25%] hidden h-[250px] w-[250px] bg-[#e7f7f3]/60 lg:block"
+    ></div>
+
+
+
+    <div
+        class="relative mx-auto flex min-h-[644px] max-w-7xl items-center px-5 py-20 sm:px-8"
+    >
+
+        <div
+            class="max-w-2xl"
+        >
+
+
+            <!-- BADGE -->
+
+            <div
+                class="fade-up inline-flex items-center gap-2 rounded-full border border-[#0f8b8d]/15 bg-white/75 px-4 py-2 text-xs font-bold text-[#0f8b8d] shadow-sm backdrop-blur"
+            >
+
+                <span
+                    class="flex h-2 w-2 rounded-full bg-emerald-500"
+                ></span>
+
+                Trusted dental care in Camiguin
+
+            </div>
+
+
+
+            <!-- TITLE -->
+
+            <h1
+                class="fade-up mt-7 text-5xl font-extrabold leading-[1.05] tracking-[-.04em] text-[#17333a] sm:text-6xl lg:text-[76px]"
+            >
+
+                Your smile.
+
+                <span
+                    class="block text-[#0f8b8d]"
+                >
+                    Our passion.
+                </span>
+
+            </h1>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <p
+                class="fade-delay mt-7 max-w-xl text-base leading-8 text-[#5d7175] sm:text-lg"
+            >
+
+                Welcome to PrimaSmile Island Dental Clinic —
+                a warm, modern dental clinic dedicated to helping
+                you feel confident about your smile.
+
+            </p>
+
+
+
+            <!-- BUTTONS -->
+
+            <div
+                class="fade-delay-2 mt-9 flex flex-col gap-3 sm:flex-row"
+            >
+
+                <a
+                    href="tel:09369997175"
+                    class="inline-flex items-center justify-center gap-2 rounded-full bg-[#0f8b8d] px-7 py-4 text-sm font-bold text-white shadow-xl shadow-[#0f8b8d]/20 transition hover:-translate-y-1 hover:bg-[#086b6d]"
+                >
+
+                    Book an Appointment
+
+                    <svg
+                        class="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 12h14m-6-6 6 6-6 6"
+                        />
+
+                    </svg>
+
+                </a>
+
+
+                <a
+                    href="#services"
+                    class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/80 px-7 py-4 text-sm font-bold text-[#17333a] backdrop-blur transition hover:-translate-y-1 hover:border-[#0f8b8d]/30 hover:text-[#0f8b8d]"
+                >
+                    Explore Our Services
+                </a>
+
+            </div>
+
+
+
+            <!-- TRUST -->
+
+            <div
+                class="mt-11 flex flex-wrap items-center gap-x-7 gap-y-4"
+            >
+
+                <div
+                    class="flex items-center gap-2"
+                >
+
+                    <div
+                        class="flex gap-0.5 text-[#f4b942]"
+                    >
+                        ★★★★★
+                    </div>
+
+                    <span
+                        class="text-sm font-bold text-[#17333a]"
+                    >
+                        5.0
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="h-5 w-px bg-slate-300"
+                ></div>
+
+
+                <div
+                    class="text-sm text-slate-500"
+                >
+                    5 verified reviews
+                </div>
+
+
+                <div
+                    class="h-5 w-px bg-slate-300"
+                ></div>
+
+
+                <div
+                    class="flex items-center gap-2 text-sm text-slate-500"
+                >
+
+                    <svg
+                        class="h-4 w-4 text-[#0f8b8d]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.7"
+                            d="M12 21s8-7.2 8-13a8 8 0 10-16 0c0 5.8 8 13 8 13z"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="8"
+                            r="2.5"
+                        />
+
+                    </svg>
+
+                    Catarman, Camiguin
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FLOATING APPOINTMENT CARD -->
+
+        <div
+            class="floating-card absolute bottom-10 right-8 hidden w-[280px] rounded-3xl border border-white/70 bg-white/90 p-6 shadow-2xl backdrop-blur-xl lg:block"
+        >
+
+            <div
+                class="flex items-start justify-between"
+            >
+
+                <div
+                    class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e7f7f7] text-[#0f8b8d]"
+                >
+
+                    <svg
+                        class="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="17"
+                            rx="2"
+                            stroke-width="1.7"
+                        />
+
+                        <path
+                            d="M16 2v4M8 2v4M3 10h18"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <span
+                    class="rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-emerald-600"
+                >
+                    Open
+                </span>
+
+            </div>
+
+
+            <div
+                class="mt-5 text-lg font-bold"
+            >
+                Ready for your visit?
+            </div>
+
+
+            <p
+                class="mt-2 text-sm leading-6 text-slate-500"
+            >
+                Give us a call and let's schedule your dental visit.
+            </p>
+
+
+            <a
+                href="tel:09369997175"
+                class="mt-5 flex items-center justify-center rounded-xl bg-[#0f8b8d] px-4 py-3 text-sm font-bold text-white"
+            >
+                0936 999 7175
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     QUICK INFORMATION
+============================================================ -->
+
+<section
+    class="relative z-20 px-5 sm:px-8"
+>
+
+    <div
+        class="mx-auto -mt-8 max-w-6xl overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-soft"
+    >
+
+        <div
+            class="grid divide-y divide-slate-100 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4"
+        >
+
+
+            <!-- LOCATION -->
+
+            <div
+                class="flex items-center gap-4 p-6"
+            >
+
+                <div
+                    class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e9f8f8] text-[#0f8b8d]"
+                >
+
+                    <svg
+                        class="h-5 w-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="M12 21s8-7.2 8-13a8 8 0 1 0-16 0c0 5.8 8 13 8 13Z"
+                            stroke-width="1.7"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="8"
+                            r="2.5"
+                            stroke-width="1.7"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <div>
+
+                    <div
+                        class="text-[10px] font-bold uppercase tracking-[.18em] text-slate-400"
+                    >
+                        Location
+                    </div>
+
+                    <div
+                        class="mt-1 text-sm font-bold"
+                    >
+                        Catarman, Camiguin
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div
+                class="flex items-center gap-4 p-6"
+            >
+
+                <div
+                    class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e9f8f8] text-[#0f8b8d]"
+                >
+
+                    <svg
+                        class="h-5 w-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="M4 5a2 2 0 0 1 2-2h2l2 5-2 2a16 16 0 0 0 6 6l2-2 5 2v2a2 2 0 0 1-2 2C10.3 20 4 13.7 4 6V5Z"
+                            stroke-width="1.7"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <div>
+
+                    <div
+                        class="text-[10px] font-bold uppercase tracking-[.18em] text-slate-400"
+                    >
+                        Contact
+                    </div>
+
+                    <a
+                        href="tel:09369997175"
+                        class="mt-1 block text-sm font-bold hover:text-[#0f8b8d]"
+                    >
+                        0936 999 7175
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HOURS -->
+
+            <div
+                class="flex items-center gap-4 p-6"
+            >
+
+                <div
+                    class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e9f8f8] text-[#0f8b8d]"
+                >
+
+                    <svg
+                        class="h-5 w-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="9"
+                            stroke-width="1.7"
+                        />
+
+                        <path
+                            d="M12 7v5l3 2"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <div>
+
+                    <div
+                        class="text-[10px] font-bold uppercase tracking-[.18em] text-slate-400"
+                    >
+                        Hours
+                    </div>
+
+                    <div
+                        class="mt-1 text-sm font-bold"
+                    >
+                        Opens 9:00 AM
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RATING -->
+
+            <div
+                class="flex items-center gap-4 p-6"
+            >
+
+                <div
+                    class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-amber-500"
+                >
+
+                    <svg
+                        class="h-5 w-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <div>
+
+                    <div
+                        class="text-[10px] font-bold uppercase tracking-[.18em] text-slate-400"
+                    >
+                        Rating
+                    </div>
+
+                    <div
+                        class="mt-1 text-sm font-bold"
+                    >
+                        5.0 · 5 Reviews
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+
+<section
+    id="about"
+    class="px-5 py-24 sm:px-8 lg:py-32"
+>
+
+    <div
+        class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-24"
+    >
+
+
+        <!-- IMAGE -->
+
+        <div
+            class="relative order-2 lg:order-1"
+        >
+
+            <div
+                class="image-hover relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#dff3f2]"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=90"
+                    alt="Dental clinic"
+                    class="h-full w-full object-cover"
+                >
+
+            </div>
+
+
+            <!-- EXPERIENCE CARD -->
+
+            <div
+                class="absolute -bottom-7 -right-4 w-[220px] rounded-2xl border border-white bg-white p-5 shadow-2xl sm:-right-8"
+            >
+
+                <div
+                    class="flex items-center gap-3"
+                >
+
+                    <div
+                        class="flex h-11 w-11 items-center justify-center rounded-full bg-[#e9f8f8] text-[#0f8b8d]"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                d="M12 3v18M3 12h18"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div
+                            class="font-bold"
+                        >
+                            Patient First
+                        </div>
+
+                        <div
+                            class="mt-1 text-xs text-slate-400"
+                        >
+                            Care that feels personal
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CONTENT -->
+
+        <div
+            class="order-1 lg:order-2"
+        >
+
+            <div
+                class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[.22em] text-[#0f8b8d]"
+            >
+
+                <span
+                    class="h-1.5 w-8 rounded-full bg-[#0f8b8d]"
+                ></span>
+
+                About PrimaSmile
+
+            </div>
+
+
+            <h2
+                class="mt-5 text-4xl font-extrabold leading-tight tracking-[-.03em] sm:text-5xl"
+            >
+
+                A healthier smile
+                <span
+                    class="text-[#0f8b8d]"
+                >
+                    starts here.
+                </span>
+
+            </h2>
+
+
+            <p
+                class="mt-7 text-lg leading-8 text-[#607277]"
+            >
+
+                PrimaSmile Island Dental Clinic is a welcoming
+                dental clinic serving the Catarman, Camiguin community.
+
+            </p>
+
+
+            <p
+                class="mt-5 leading-8 text-slate-500"
+            >
+
+                Our goal is simple: create a comfortable experience
+                where patients feel listened to, cared for and confident
+                throughout their dental visit.
+
+            </p>
+
+
+
+            <!-- FEATURES -->
+
+            <div
+                class="mt-9 grid gap-5 sm:grid-cols-2"
+            >
+
+                <div
+                    class="flex gap-3"
+                >
+
+                    <div
+                        class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e7f7f7] text-[#0f8b8d]"
+                    >
+
+                        <svg
+                            class="h-4 w-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                d="m5 12 4 4L19 6"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div
+                            class="font-bold"
+                        >
+                            Welcoming Environment
+                        </div>
+
+                        <p
+                            class="mt-1 text-sm leading-6 text-slate-500"
+                        >
+                            A clean and comfortable clinic experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    class="flex gap-3"
+                >
+
+                    <div
+                        class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e7f7f7] text-[#0f8b8d]"
+                    >
+
+                        <svg
+                            class="h-4 w-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                d="m5 12 4 4L19 6"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div
+                            class="font-bold"
+                        >
+                            Patient-Focused Care
+                        </div>
+
+                        <p
+                            class="mt-1 text-sm leading-6 text-slate-500"
+                        >
+                            We listen to your concerns and needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    class="flex gap-3"
+                >
+
+                    <div
+                        class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e7f7f7] text-[#0f8b8d]"
+                    >
+
+                        <svg
+                            class="h-4 w-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                d="m5 12 4 4L19 6"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div
+                            class="font-bold"
+                        >
+                            Professional Team
+                        </div>
+
+                        <p
+                            class="mt-1 text-sm leading-6 text-slate-500"
+                        >
+                            Friendly and accommodating dental care.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    class="flex gap-3"
+                >
+
+                    <div
+                        class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e7f7f7] text-[#0f8b8d]"
+                    >
+
+                        <svg
+                            class="h-4 w-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                d="m5 12 4 4L19 6"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div
+                            class="font-bold"
+                        >
+                            Quality Care
+                        </div>
+
+                        <p
+                            class="mt-1 text-sm leading-6 text-slate-500"
+                        >
+                            Focused on a positive patient experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     SERVICES
+============================================================ -->
+
+<section
+    id="services"
+    class="bg-[#eef8f8] px-5 py-24 sm:px-8 lg:py-32"
+>
+
+    <div class="mx-auto max-w-7xl">
+
+
+        <!-- HEADER -->
+
+        <div
+            class="mx-auto max-w-2xl text-center"
+        >
+
+            <div
+                class="text-xs font-bold uppercase tracking-[.22em] text-[#0f8b8d]"
+            >
+                Dental care
+            </div>
+
+
+            <h2
+                class="mt-4 text-4xl font-extrabold tracking-[-.03em] sm:text-5xl"
+            >
+                Care for every smile.
+            </h2>
+
+
+            <p
+                class="mt-5 leading-7 text-slate-500"
+            >
+
+                From routine visits to smile-focused treatments,
+                talk with our team about the dental care you need.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- SERVICES -->
+
+        <div
+            class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+        >
+
+
+            <!-- SERVICE 1 -->
+
+            <article
+                class="service-card rounded-3xl border border-white bg-white p-7"
+            >
+
+                <div
+                    class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e7f7f7] text-[#0f8b8d]"
+                >
+
+                    <svg
+                        class="h-7 w-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="M7.5 4.5C9 3.2 10.3 3 12 4c1.7-1 3-.8 4.5.5 2.1 1.8 2.2 5.2 1.6 8.1-.5 2.3-1.1 4.6-2.3 6.1-.5.7-1.4.7-1.8-.1l-1.1-2.7c-.3-.8-1.4-.8-1.7 0l-1.1 2.7c-.4.8-1.3.8-1.8.1-1.2-1.5-1.8-3.8-2.3-6.1-.6-2.9-.5-6.3 1.5-8.1Z"
+                            stroke-width="1.5"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <h3
+                    class="mt-6 text-xl font-bold"
+                >
+                    Dental Checkups
+                </h3>
+
+
+                <p
+                    class="mt-3 text-sm leading-7 text-slate-500"
+                >
+                    Regular dental visits to help maintain your oral
+                    health and identify concerns early.
+                </p>
+
+
+                <a
+                    href="tel:09369997175"
+                    class="mt-6 inline-flex text-sm font-bold text-[#0f8b8d]"
+                >
+                    Ask about this service
+                    <span class="ml-2">→</span>
+                </a>
+
+            </article>
+
+
+
+            <!-- SERVICE 2 -->
+
+            <article
+                class="service-card rounded-3xl border border-white bg-white p-7"
+            >
+
+                <div
+                    class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e7f7f7] text-[#0f8b8d]"
+                >
+
+                    <svg
+                        class="h-7 w-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="M5 12h14M12 5v14"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="9"
+                            stroke-width="1.5"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <h3
+                    class="mt-6 text-xl font-bold"
+                >
+                    Preventive Care
+                </h3>
+
+
+                <p
+                    class="mt-3 text-sm leading-7 text-slate-500"
+                >
+                    Build healthy habits and keep your smile looking
+                    and feeling its best.
+                </p>
+
+
+                <a
+                    href="tel:09369997175"
+                    class="mt-6 inline-flex text-sm font-bold text-[#0f8b8d]"
+                >
+                    Ask about this service
+                    <span class="ml-2">→</span>
+                </a>
+
+            </article>
+
+
+
+            <!-- SERVICE 3 -->
+
+            <article
+                class="service-card rounded-3xl border border-white bg-white p-7"
+            >
+
+                <div
+                    class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e7f7f7] text-[#0f8b8d]"
+                >
+
+                    <svg
+                        class="h-7 w-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="M4 12h16M12 4v16"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            stroke-width="1.5"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <h3
+                    class="mt-6 text-xl font-bold"
+                >
+                    Restorative Care
+                </h3>
+
+
+                <p
+                    class="mt-3 text-sm leading-7 text-slate-500"
+                >
+                    Discuss treatment options designed to restore
+                    comfort and function.
+                </p>
+
+
+                <a
+                    href="tel:09369997175"
+                    class="mt-6 inline-flex text-sm font-bold text-[#0f8b8d]"
+                >
+                    Ask about this service
+                    <span class="ml-2">→</span>
+                </a>
+
+            </article>
+
+
+
+            <!-- SERVICE 4 -->
+
+            <article
+                class="service-card rounded-3xl border border-white bg-white p-7"
+            >
+
+                <div
+                    class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e7f7f7] text-[#0f8b8d]"
+                >
+
+                    <svg
+                        class="h-7 w-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="m12 3 2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5L12 3Z"
+                            stroke-width="1.5"
+                            stroke-linejoin="round"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <h3
+                    class="mt-6 text-xl font-bold"
+                >
+                    Smile Care
+                </h3>
+
+
+                <p
+                    class="mt-3 text-sm leading-7 text-slate-500"
+                >
+                    Talk with our dental team about options for
+                    improving the appearance of your smile.
+                </p>
+
+
+                <a
+                    href="tel:09369997175"
+                    class="mt-6 inline-flex text-sm font-bold text-[#0f8b8d]"
+                >
+                    Ask about this service
+                    <span class="ml-2">→</span>
+                </a>
+
+            </article>
+
+
+
+            <!-- SERVICE 5 -->
+
+            <article
+                class="service-card rounded-3xl border border-white bg-white p-7"
+            >
+
+                <div
+                    class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e7f7f7] text-[#0f8b8d]"
+                >
+
+                    <svg
+                        class="h-7 w-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="M6 4h12M6 20h12M8 4c0 4 4 5 4 8s-4 4-4 8M16 4c0 4-4 5-4 8s4 4 4 8"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <h3
+                    class="mt-6 text-xl font-bold"
+                >
+                    Dental Consultation
+                </h3>
+
+
+                <p
+                    class="mt-3 text-sm leading-7 text-slate-500"
+                >
+                    Have questions about your dental health?
+                    Schedule a consultation with our team.
+                </p>
+
+
+                <a
+                    href="tel:09369997175"
+                    class="mt-6 inline-flex text-sm font-bold text-[#0f8b8d]"
+                >
+                    Talk to the clinic
+                    <span class="ml-2">→</span>
+                </a>
+
+            </article>
+
+
+
+            <!-- SERVICE 6 -->
+
+            <article
+                class="service-card rounded-3xl border border-[#0f8b8d]/10 bg-[#0f8b8d] p-7 text-white"
+            >
+
+                <div
+                    class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10"
+                >
+
+                    <svg
+                        class="h-7 w-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="M12 3v18M3 12h18"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <h3
+                    class="mt-6 text-xl font-bold"
+                >
+                    Not sure what you need?
+                </h3>
+
+
+                <p
+                    class="mt-3 text-sm leading-7 text-white/75"
+                >
+                    Give us a call. Our team can help you determine
+                    the next step for your dental concern.
+                </p>
+
+
+                <a
+                    href="tel:09369997175"
+                    class="mt-6 inline-flex rounded-full bg-white px-5 py-3 text-sm font-bold text-[#0f8b8d]"
+                >
+                    Call the Clinic
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     WHY CHOOSE US
+============================================================ -->
+
+<section
+    class="px-5 py-24 sm:px-8 lg:py-32"
+>
+
+    <div
+        class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[.9fr_1.1fr]"
+    >
+
+
+        <!-- LEFT -->
+
+        <div>
+
+            <div
+                class="text-xs font-bold uppercase tracking-[.22em] text-[#0f8b8d]"
+            >
+                Why patients choose us
+            </div>
+
+
+            <h2
+                class="mt-5 text-4xl font-extrabold leading-tight tracking-[-.03em] sm:text-5xl"
+            >
+
+                Dental care should
+                feel comfortable.
+
+            </h2>
+
+
+            <p
+                class="mt-6 leading-8 text-slate-500"
+            >
+
+                A great dental experience isn't only about treatment.
+                It's also about feeling welcomed, informed and cared for.
+
+            </p>
+
+
+            <a
+                href="tel:09369997175"
+                class="mt-8 inline-flex items-center gap-2 rounded-full bg-[#17333a] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#0f8b8d]"
+            >
+
+                Talk to our team
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div
+            class="grid gap-5 sm:grid-cols-2"
+        >
+
+
+            <div
+                class="rounded-3xl border border-slate-100 bg-white p-7 shadow-card"
+            >
+
+                <div
+                    class="text-3xl"
+                >
+                    ☺
+                </div>
+
+                <h3
+                    class="mt-5 text-lg font-bold"
+                >
+                    Friendly & Welcoming
+                </h3>
+
+                <p
+                    class="mt-3 text-sm leading-7 text-slate-500"
+                >
+                    Patients describe the team as warm,
+                    accommodating and professional.
+                </p>
+
+            </div>
+
+
+
+            <div
+                class="rounded-3xl border border-slate-100 bg-white p-7 shadow-card"
+            >
+
+                <div
+                    class="text-3xl"
+                >
+                    ✦
+                </div>
+
+                <h3
+                    class="mt-5 text-lg font-bold"
+                >
+                    Clean Environment
+                </h3>
+
+                <p
+                    class="mt-3 text-sm leading-7 text-slate-500"
+                >
+                    A clean, organized environment designed
+                    to help patients feel at ease.
+                </p>
+
+            </div>
+
+
+
+            <div
+                class="rounded-3xl border border-slate-100 bg-white p-7 shadow-card"
+            >
+
+                <div
+                    class="text-3xl"
+                >
+                    ♥
+                </div>
+
+                <h3
+                    class="mt-5 text-lg font-bold"
+                >
+                    Patient Care
+                </h3>
+
+                <p
+                    class="mt-3 text-sm leading-7 text-slate-500"
+                >
+                    We take the time to listen and understand
+                    each patient's concerns.
+                </p>
+
+            </div>
+
+
+
+            <div
+                class="rounded-3xl border border-slate-100 bg-white p-7 shadow-card"
+            >
+
+                <div
+                    class="text-3xl"
+                >
+                    ★
+                </div>
+
+                <h3
+                    class="mt-5 text-lg font-bold"
+                >
+                    5.0 Rated
+                </h3>
+
+                <p
+                    class="mt-3 text-sm leading-7 text-slate-500"
+                >
+                    Our current Google profile shows a
+                    5.0 rating from 5 reviews.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+
+<section
+    id="reviews"
+    class="bg-[#17333a] px-5 py-24 text-white sm:px-8 lg:py-32"
+>
+
+    <div class="mx-auto max-w-7xl">
+
+
+        <!-- HEADER -->
+
+        <div
+            class="flex flex-col justify-between gap-7 md:flex-row md:items-end"
+        >
+
+            <div>
+
+                <div
+                    class="text-xs font-bold uppercase tracking-[.22em] text-[#78d7d5]"
+                >
+                    Patient experiences
+                </div>
+
+
+                <h2
+                    class="mt-4 max-w-xl text-4xl font-extrabold tracking-[-.03em] sm:text-5xl"
+                >
+                    Kind words from our patients.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <div
+                    class="flex gap-1 text-[#f5c451]"
+                >
+                    ★★★★★
+                </div>
+
+                <div
+                    class="mt-2 text-sm text-white/45"
+                >
+                    5.0 · 5 Google reviews
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- REVIEWS -->
+
+        <div
+            class="mt-14 grid gap-5 md:grid-cols-3"
+        >
+
+
+            <!-- REVIEW -->
+
+            <article
+                class="rounded-3xl border border-white/10 bg-white/[.06] p-7 backdrop-blur"
+            >
+
+                <div
+                    class="quote-mark text-6xl text-[#78d7d5]"
+                >
+                    “
+                </div>
+
+
+                <p
+                    class="mt-1 leading-7 text-white/70"
+                >
+
+                    I recently visited PrimaSmile Island and had
+                    a very positive experience. The staff were warm,
+                    professional, and efficient.
+
+                </p>
+
+
+                <div
+                    class="mt-7 border-t border-white/10 pt-5"
+                >
+
+                    <div
+                        class="font-bold"
+                    >
+                        Mark H
+                    </div>
+
+                    <div
+                        class="mt-1 text-xs text-white/40"
+                    >
+                        Google Review · 5 stars
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- REVIEW -->
+
+            <article
+                class="rounded-3xl border border-white/10 bg-[#0f8b8d] p-7"
+            >
+
+                <div
+                    class="quote-mark text-6xl text-white/40"
+                >
+                    “
+                </div>
+
+
+                <p
+                    class="mt-1 leading-7 text-white/85"
+                >
+
+                    The doctor is good and accommodating.
+                    I will recommend this clinic to all.
+
+                </p>
+
+
+                <div
+                    class="mt-7 border-t border-white/15 pt-5"
+                >
+
+                    <div
+                        class="font-bold"
+                    >
+                        Angela Bia Dacup
+                    </div>
+
+                    <div
+                        class="mt-1 text-xs text-white/55"
+                    >
+                        Google Review · 5 stars
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- REVIEW -->
+
+            <article
+                class="rounded-3xl border border-white/10 bg-white/[.06] p-7 backdrop-blur"
+            >
+
+                <div
+                    class="quote-mark text-6xl text-[#78d7d5]"
+                >
+                    “
+                </div>
+
+
+                <p
+                    class="mt-1 leading-7 text-white/70"
+                >
+
+                    The entire team was wonderful. Thank you for
+                    the attention and care and for giving me a
+                    bright smile.
+
+                </p>
+
+
+                <div
+                    class="mt-7 border-t border-white/10 pt-5"
+                >
+
+                    <div
+                        class="font-bold"
+                    >
+                        Jill Marie Loquias
+                    </div>
+
+                    <div
+                        class="mt-1 text-xs text-white/40"
+                    >
+                        Google Review · 5 stars
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     CTA
+============================================================ -->
+
+<section
+    class="px-5 py-20 sm:px-8"
+>
+
+    <div
+        class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-[#dff5f4] px-7 py-14 sm:px-12 lg:px-16"
+    >
+
+
+        <!-- DECORATION -->
+
+        <div
+            class="absolute -right-20 -top-24 h-72 w-72 rounded-full border-[40px] border-white/40"
+        ></div>
+
+
+        <div
+            class="absolute -bottom-24 -left-16 h-64 w-64 rounded-full border-[30px] border-white/30"
+        ></div>
+
+
+
+        <div
+            class="relative max-w-2xl"
+        >
+
+            <div
+                class="text-xs font-bold uppercase tracking-[.22em] text-[#0f8b8d]"
+            >
+                Ready when you are
+            </div>
+
+
+            <h2
+                class="mt-4 text-4xl font-extrabold leading-tight tracking-[-.03em] sm:text-5xl"
+            >
+
+                Let's take care
+                of your smile.
+
+            </h2>
+
+
+            <p
+                class="mt-5 leading-7 text-[#5d7377]"
+            >
+
+                Have a question or want to schedule a visit?
+                Give PrimaSmile Island Dental Clinic a call.
+
+            </p>
+
+
+            <div
+                class="mt-8 flex flex-col gap-3 sm:flex-row"
+            >
+
+                <a
+                    href="tel:09369997175"
+                    class="inline-flex items-center justify-center gap-2 rounded-full bg-[#0f8b8d] px-7 py-4 text-sm font-bold text-white shadow-lg shadow-[#0f8b8d]/20 transition hover:-translate-y-1 hover:bg-[#086b6d]"
+                >
+
+                    Call 0936 999 7175
+
+                    <svg
+                        class="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="M5 12h14m-6-6 6 6-6 6"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+
+                    </svg>
+
+                </a>
+
+
+                <a
+                    href="#location"
+                    class="inline-flex items-center justify-center rounded-full border border-[#0f8b8d]/20 bg-white/60 px-7 py-4 text-sm font-bold text-[#17333a]"
+                >
+                    Find Our Clinic
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     LOCATION
+============================================================ -->
+
+<section
+    id="location"
+    class="bg-[#f1f8f8] px-5 py-24 sm:px-8 lg:py-32"
+>
+
+    <div
+        class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:gap-20"
+    >
+
+
+        <!-- INFO -->
+
+        <div>
+
+            <div
+                class="text-xs font-bold uppercase tracking-[.22em] text-[#0f8b8d]"
+            >
+                Visit us
+            </div>
+
+
+            <h2
+                class="mt-4 text-4xl font-extrabold tracking-[-.03em] sm:text-5xl"
+            >
+                Come say hello.
+            </h2>
+
+
+            <p
+                class="mt-6 max-w-lg leading-8 text-slate-500"
+            >
+
+                You'll find PrimaSmile Island Dental Clinic
+                in Purok 6, Poblacion, Catarman, Camiguin.
+
+            </p>
+
+
+
+            <!-- DETAILS -->
+
+            <div
+                class="mt-9 space-y-6"
+            >
+
+
+                <!-- ADDRESS -->
+
+                <div
+                    class="flex gap-4"
+                >
+
+                    <div
+                        class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-[#0f8b8d] shadow-sm"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                d="M12 21s8-7.2 8-13a8 8 0 1 0-16 0c0 5.8 8 13 8 13Z"
+                                stroke-width="1.7"
+                            />
+
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="2.5"
+                                stroke-width="1.7"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div
+                            class="text-xs font-bold uppercase tracking-wider text-slate-400"
+                        >
+                            Address
+                        </div>
+
+                        <div
+                            class="mt-1 font-bold"
+                        >
+                            PUROK 6, Poblacion
+                        </div>
+
+                        <div
+                            class="text-sm text-slate-500"
+                        >
+                            Catarman, Camiguin 9104
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div
+                    class="flex gap-4"
+                >
+
+                    <div
+                        class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-[#0f8b8d] shadow-sm"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                d="M4 5a2 2 0 0 1 2-2h2l2 5-2 2a16 16 0 0 0 6 6l2-2 5 2v2a2 2 0 0 1-2 2C10.3 20 4 13.7 4 6V5Z"
+                                stroke-width="1.7"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div
+                            class="text-xs font-bold uppercase tracking-wider text-slate-400"
+                        >
+                            Phone
+                        </div>
+
+                        <a
+                            href="tel:09369997175"
+                            class="mt-1 block font-bold hover:text-[#0f8b8d]"
+                        >
+                            0936 999 7175
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HOURS -->
+
+                <div
+                    class="flex gap-4"
+                >
+
+                    <div
+                        class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-[#0f8b8d] shadow-sm"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9"
+                                stroke-width="1.7"
+                            />
+
+                            <path
+                                d="M12 7v5l3 2"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div
+                            class="text-xs font-bold uppercase tracking-wider text-slate-400"
+                        >
+                            Clinic Hours
+                        </div>
+
+                        <div
+                            class="mt-1 font-bold"
+                        >
+                            Opens at 9:00 AM
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MAP BUTTON -->
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=PrimaSmile%20Island%20Dental%20Clinic%20Catarman%20Camiguin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-9 inline-flex items-center gap-2 rounded-full bg-[#17333a] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#0f8b8d]"
+            >
+
+                Get Directions
+
+                <svg
+                    class="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+
+                    <path
+                        d="M5 12h14m-6-6 6 6-6 6"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                </svg>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- MAP CARD -->
+
+        <div
+            class="map-grid relative min-h-[430px] overflow-hidden rounded-[2rem] border border-[#d9ecec] bg-[#e4f4f3]"
+        >
+
+
+            <!-- FAKE MAP LAND -->
+
+            <div
+                class="absolute left-[15%] top-[18%] h-28 w-44 rotate-12 rounded-[40%] bg-[#d4ebe5]"
+            ></div>
+
+            <div
+                class="absolute bottom-[12%] right-[12%] h-40 w-56 -rotate-12 rounded-[40%] bg-[#d1e8e2]"
+            ></div>
+
+
+            <!-- LOCATION PIN -->
+
+            <div
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+
+                <div
+                    class="flex h-16 w-16 items-center justify-center rounded-full bg-[#0f8b8d] text-white shadow-2xl shadow-[#0f8b8d]/30 ring-8 ring-white/60"
+                >
+
+                    <svg
+                        class="h-7 w-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            d="M12 21s8-7.2 8-13a8 8 0 1 0-16 0c0 5.8 8 13 8 13Z"
+                            stroke-width="1.7"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="8"
+                            r="2.5"
+                            stroke-width="1.7"
+                        />
+
+                    </svg>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAP LABEL -->
+
+            <div
+                class="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/70 bg-white/90 p-5 shadow-xl backdrop-blur"
+            >
+
+                <div
+                    class="flex items-center justify-between gap-4"
+                >
+
+                    <div>
+
+                        <div
+                            class="text-xs font-bold uppercase tracking-wider text-[#0f8b8d]"
+                        >
+                            PrimaSmile
+                        </div>
+
+                        <div
+                            class="mt-1 font-bold"
+                        >
+                            Island Dental Clinic
+                        </div>
+
+                        <div
+                            class="mt-1 text-xs text-slate-500"
+                        >
+                            Purok 6, Poblacion, Catarman
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=PrimaSmile%20Island%20Dental%20Clinic%20Catarman%20Camiguin"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hidden rounded-xl bg-[#0f8b8d] px-4 py-3 text-xs font-bold text-white sm:block"
+                    >
+                        Maps
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+
+<footer
+    class="bg-[#10282d] px-5 py-12 text-white sm:px-8"
+>
+
+    <div class="mx-auto max-w-7xl">
+
+
+        <div
+            class="flex flex-col justify-between gap-8 md:flex-row md:items-center"
+        >
+
+
+            <!-- BRAND -->
+
+            <div
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-[#78d7d5]"
+                >
+
+                    <svg
+                        class="h-6 w-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                    >
+
+                        <path
+                            d="M7.5 4.5C9 3.2 10.3 3 12 4c1.7-1 3-.8 4.5.5 2.1 1.8 2.2 5.2 1.6 8.1-.5 2.3-1.1 4.6-2.3 6.1-.5.7-1.4.7-1.8-.1l-1.1-2.7c-.3-.8-1.4-.8-1.7 0l-1.1 2.7c-.4.8-1.3.8-1.8.1-1.2-1.5-1.8-3.8-2.3-6.1-.6-2.9-.5-6.3 1.5-8.1Z"
+                            stroke="currentColor"
+                            stroke-width="1.6"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <div>
+
+                    <div
+                        class="font-bold"
+                    >
+                        PrimaSmile
+                    </div>
+
+                    <div
+                        class="mt-1 text-[9px] font-semibold uppercase tracking-[.2em] text-[#78d7d5]"
+                    >
+                        Island Dental Clinic
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LINKS -->
+
+            <div
+                class="flex flex-wrap gap-x-7 gap-y-3 text-sm text-white/45"
+            >
+
+                <a
+                    href="#home"
+                    class="transition hover:text-white"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="#about"
+                    class="transition hover:text-white"
+                >
+                    About
+                </a>
+
+                <a
+                    href="#services"
+                    class="transition hover:text-white"
+                >
+                    Services
+                </a>
+
+                <a
+                    href="#reviews"
+                    class="transition hover:text-white"
+                >
+                    Reviews
+                </a>
+
+                <a
+                    href="#location"
+                    class="transition hover:text-white"
+                >
+                    Location
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BOTTOM -->
+
+        <div
+            class="mt-10 flex flex-col justify-between gap-4 border-t border-white/10 pt-7 text-xs text-white/25 sm:flex-row"
+        >
+
+            <div>
+                © 2026 PrimaSmile Island Dental Clinic.
+            </div>
+
+            <div>
+                Catarman · Camiguin · Philippines
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ============================================================
+     MOBILE MENU SCRIPT
+============================================================ -->
+
+<script>
+
+    document.addEventListener(
+        'DOMContentLoaded',
+        function () {
+
+            const button =
+                document.getElementById(
+                    'menuButton'
+                );
+
+            const menu =
+                document.getElementById(
+                    'mobileMenu'
+                );
+
+
+            if (!button || !menu) {
+                return;
+            }
+
+
+            button.addEventListener(
+                'click',
+                function () {
+
+                    menu.classList.toggle(
+                        'hidden'
+                    );
+
+                }
+            );
+
+
+            menu
+                .querySelectorAll('a')
+                .forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            'click',
+                            function () {
+
+                                menu.classList.add(
+                                    'hidden'
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
